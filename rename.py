@@ -22,4 +22,4 @@ for m in tqdm(range(10)):
     j = 0
     m +=1
 
-print("\n\nALL NAMES CHANGED AND SORTED!!!\n\n")
+print("\n\nALL NAMES CHANGED AND SORTED!!!\n")
