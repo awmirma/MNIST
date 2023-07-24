@@ -1,0 +1,1 @@
+# This is an empty file used to mark the 'mnist_project' directory as a Python package.
