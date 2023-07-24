@@ -1,4 +1,5 @@
 import tensorflow as tf
+import glob
 
 mnist = tf.keras.datasets.mnist
 (x_train, y_train),(x_test, y_test) = mnist.load_data()
@@ -15,6 +16,21 @@ model.add(tf.keras.layers.Dense(10, activation='softmax'))
 
 model.compile(optimizer='adam' , loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(x_train,y_train,epochs=3)
 
-model.save('handwritten.model')
+
+models = []
+# weights_epoch = 0
+
+for i in range(5):
+    m = model.fit(x_train,y_train,epochs=i)
+    models.append(m)
+
+histories = glob.glob("dropout_0.2/history/*model_{}*".format(i))
+
+histories = sorted(histories)
+print(histories)
+# model.fit(x_train,y_train,epochs=)
+# model.save(f'handwrittenfinal.model')
+# loss , accuracy = model.evaluate(x_test,y_test)
+# print(loss)
+# print(accuracy)
