@@ -34,3 +34,12 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 # Traing model
 history = model.fit(train_images, train_labels, epochs=10, batch_size=128, validation_split=0.1)
 
+# evaluate the model on the test set
+test_loss, test_accuracy = model.evaluate(test_images, test_labels)
+print("Test accuracy:", test_accuracy)
+
+
+# markpredictions
+predictions = model.predict(test_images[:10])
+predicted_labels = np.argmax(predictions, axis=1)
+print("Predicted labels:", predicted_labels)
