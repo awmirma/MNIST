@@ -46,7 +46,7 @@ python processes.py
 3. Output Layer: The final layer with 10 units (corresponding to the 10 digits) and a softmax activation function.
 
 ### Results
- After training the model for 10 epochs, the accuracy on the test set is approximately 93%.
+ After training the model for 10 epochs, the accuracy on the test set is approximately 97%.
 
 ### Further Improvements
 - Experiment with different model architectures, such as convolutional neural networks (CNNs), to potentially improve accuracy.
