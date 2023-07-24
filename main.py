@@ -30,4 +30,7 @@ model.add(Dense(10, activation='softmax'))
 
 # compile the model
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-print ("hhhhheeeee")
+
+# Traing model
+history = model.fit(train_images, train_labels, epochs=10, batch_size=128, validation_split=0.1)
+
