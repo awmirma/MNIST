@@ -22,3 +22,12 @@ test_images  = test_images.reshape((-1,28*28))
 train_labels = to_categorical(train_labels)
 test_labels = to_categorical(test_labels)
 
+# Build the model architecture 
+model = Sequential()
+model.add(Dense(128, activation='relu', input_shape=(28 * 28,)))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(10, activation='softmax'))
+
+# compile the model
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+print ("hhhhheeeee")
